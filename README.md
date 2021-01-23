@@ -23,3 +23,7 @@ Input data is an array of 2 or 3 dimensional points followed by the tolerance an
 * `<input> <tolerance> <look_ahead>`
 
 * `"[[0, 1], [1, 12], [2, 3], [4, 5], [6, 14], [7, 12], [8, 1]]" 2 3`
+
+## Example visualization
+
+![Example visualization](example.png "Example visualization")
