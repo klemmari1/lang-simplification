@@ -67,9 +67,12 @@ def get_shortest_distance(
     end_point: np.ndarray,
     intermediate_point: np.ndarray,
 ) -> float:
+    # https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line#cite_note-GEO-4
+    v = end_point - start_point
+    v_hat = v / np.linalg.norm(v)
     return np.linalg.norm(
-        np.cross(end_point - start_point, start_point - intermediate_point)
-        / np.linalg.norm(end_point - start_point)
+        (start_point - intermediate_point)
+        - np.dot((start_point - intermediate_point), v_hat) * v_hat
     )
 
 
